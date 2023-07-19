@@ -7,11 +7,13 @@ Parameters to edit on gnuplot.plot:
 
  grid size: xrange,yrange
  axis tics: x2tics,ytics
+
 Compilation and running:
  run the executable runnit
 
 NOTE: If runnit is not an executable:
       run the command: chmod +x runnit
 
-NOTE: runnit deletes the executable, listOfFile, and the library
-      if you want to keep any of those files, edit runnit
+NOTE: runnit deletes the gameOfLife executable, listOfFile, 
+      and the library if you want to keep any of those files:
+      edit runnit and delete the associated line
