@@ -1,6 +1,6 @@
       PROGRAM GAMEOFLIFE
       IMPLICIT REAL*8 (A-H,O-Z)
-      PARAMETER (iter=30, ixwidth=20, iywidth=20) !iterations and grid size
+      PARAMETER (iter=50, ixwidth=20, iywidth=20) !iterations and grid size
       LOGICAL, DIMENSION(0:ixwidth+1,0:iywidth+1) :: old,new
       INTEGER, DIMENSION(  ixwidth  ,  iywidth  ) :: mOut
       CHARACTER(12) frmt
