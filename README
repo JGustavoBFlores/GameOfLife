@@ -17,3 +17,5 @@ NOTE: If runnit is not an executable:
 NOTE: runnit deletes the gameOfLife executable, listOfFile, 
       and the library if you want to keep any of those files:
       edit runnit and delete the associated line
+
+To visualize your gif on mac you need to open the file on a browser.
