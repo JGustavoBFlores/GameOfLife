@@ -6,7 +6,7 @@ iterations: iter
 Parameters to edit on gnuplot.plot:
 
  grid size: xrange,yrange
-
+ axis tics: x2tics,ytics
 Compilation and running:
  run the executable runnit
 
