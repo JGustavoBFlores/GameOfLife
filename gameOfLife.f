@@ -9,8 +9,8 @@
 
 C Create data files to save the iterations      
       CALL dataFiles(iter,files)
-C Create a special format according to the height of the grid
-      CALL frmtWrttr(frmt,ixwidth)
+C Create a special format according to the length of the grid
+      CALL frmtWrttr(frmt,iywidth)
 
 C Lets set every cell to be DEAD (0) in both matrices
       new=.FALSE. 
@@ -44,12 +44,12 @@ C We gotta run through iter iterations
       DO K=1,iter
       IF(K.EQ.1)GOTO 212
 C Loop through the whole grid
-      DO I=1,ixwidth
       DO J=1,iywidth
+      DO I=1,ixwidth
 
        nCntr=0 !Counter of live neighbors
-        DO i1=I-1,I+1 !loop around the neighbors
-        DO j1=J-1,J+1 
+        DO j1=J-1,J+1 !loop around the neighbors
+        DO i1=I-1,I+1 
          IF(old(i1,j1)) nCntr = nCntr+1
         END DO
         END DO
@@ -78,15 +78,15 @@ C and also write a binary matrix of 0's and 1's to plot
  212  CONTINUE     
       mOut=0
       OPEN(UNIT=1,FILE=files(K))
-       DO I=1,ixwidth
-        DO J=1,iywidth
+       DO J=1,iywidth
+        DO I=1,ixwidth
          IF(old(I,J))mOut(I,J)=1
         END DO
        END DO
 
-       DO I=1,iywidth !This will write the matrix upside down
+       DO I=1,ixwidth !This will write the matrix upside down
                       !but is alright because gnuplot will flip it again
-        WRITE(1,frmt) (mOut(J,I),J=1,ixwidth)
+        WRITE(1,frmt) (mOut(I,J),J=1,iywidth)
        END DO
       CLOSE(1) 
       END DO
