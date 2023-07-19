@@ -1,0 +1,14 @@
+Parameters to edit on gameOfLife.f:
+
+iterations: iter
+ grid size: xwidth,ywidth
+
+Parameters to edit on gnuplot.plot:
+
+ grid size: xrange,yrange
+
+Compilation and running:
+ run the executable runnit
+
+NOTE: If runnit is not an executable:
+      run the command: chmod +x runnit
