@@ -39,7 +39,16 @@ C Now lets write a glider:
       old(3,15)=.TRUE.
       old(2,17)=.TRUE.
       old(3,16)=.TRUE.
-   
+
+C Random initial state:
+      old=.FALSE.
+      DO J=1,iywidth
+      DO I=1,ixwidth
+      CALL RANDOM_NUMBER(x)
+      IF(X.GT.0.5D0)old(I,J)=.TRUE.
+      END DO
+      END DO
+ 
 C We gotta run through iter iterations
       DO K=1,iter
       IF(K.EQ.1)GOTO 212
