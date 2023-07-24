@@ -4,3 +4,4 @@ gnuplot gnuplot.plot
 rm -fr library
 rm -fr a.out
 rm -fr listOfFiles
+../howtomakechanges
