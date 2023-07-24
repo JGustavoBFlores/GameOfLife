@@ -27,7 +27,6 @@ do for [i in list] {
 
   set view map
   plot i matrix with image axes x2y1
-  reread
 }
 
 set output
