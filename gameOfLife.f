@@ -83,7 +83,14 @@ C Loop through the whole grid
 
 C Time to save result to the old matrix to repeat the steps
 C and also write a binary matrix of 0's and 1's to plot
-      IF(new.EQ.old)STOP
+      a=0
+      DO J=1,iywidth
+      DO I=1,ixwidth
+       IF(old(I,J).EQV.new(I,J))a=a+1
+      END DO
+      END DO
+      IF(a.eq.iywidth*ixwidth)EXIT
+
       old=new
  212  CONTINUE     
       mOut=0
