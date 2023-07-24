@@ -1,6 +1,6 @@
       PROGRAM GAMEOFLIFE
       IMPLICIT REAL*8 (A-H,O-Z)
-      PARAMETER (iter=50, ixwidth=20, iywidth=20) !iterations and grid size
+      PARAMETER (iter=2000, ixwidth=20, iywidth=20) !iterations and grid size
       LOGICAL, DIMENSION(0:ixwidth+1,0:iywidth+1) :: old,new
       INTEGER, DIMENSION(  ixwidth  ,  iywidth  ) :: mOut
       CHARACTER(12) frmt
@@ -83,6 +83,7 @@ C Loop through the whole grid
 
 C Time to save result to the old matrix to repeat the steps
 C and also write a binary matrix of 0's and 1's to plot
+      IF(new.EQ.old)STOP
       old=new
  212  CONTINUE     
       mOut=0
