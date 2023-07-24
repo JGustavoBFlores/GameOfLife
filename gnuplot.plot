@@ -14,16 +14,16 @@ do for [i in list] {
   unset colorbox #to erase the color reference
 
 #xrange must be -0.5,ixwidth-0.5
-  set x2range [-0.5:19.5] #x2 to place label above graph
+  set x2range [-0.5:99.5] #x2 to place label above graph
 
 #yrange must be -0.5,iywidth-0.5
-  set yrange [19.5:-0.5]
+  set yrange [199.5:-0.5]
 
   set xtics format ""
 #x2tics must be 1,prefered Step,ixwidth
-  set x2tics 1,2,20 
+  set x2tics 1,2,100 
 #ytics must be 1,prefered Step,iywidth
-  set ytics 1,2,20 
+  set ytics 1,2,100 
 
   set view map
   plot i matrix with image axes x2y1
