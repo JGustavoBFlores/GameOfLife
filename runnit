@@ -1,3 +1,6 @@
 gfortran gameOfLife.f 
 ./a.out
 gnuplot gnuplot.plot
+rm -fr library
+rm -fr a.out
+rm -fr listOfFiles
