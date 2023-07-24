@@ -17,7 +17,7 @@ do for [i in list] {
   set x2range [-0.5:99.5] #x2 to place label above graph
 
 #yrange must be -0.5,iywidth-0.5
-  set yrange [99.5:-0.5]
+  set yrange [-0.5:99.5]
 
   set xtics format ""
 #x2tics must be 1,prefered Step,ixwidth
